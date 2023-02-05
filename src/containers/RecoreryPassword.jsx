@@ -26,4 +26,4 @@ const RecoveryPassword = () => {
   );
 };
 
-export default Login;
+export default RecoveryPassword;
