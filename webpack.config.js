@@ -8,15 +8,17 @@ module.exports = {
   resolve: { extensions: [".js", ".jsx"] },
   module: {
     rules: [
+      //leer html o jsx
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: { loader: "babel-loader" },
       },
-
+      //leer html
       { test: /\.html$/, use: [{ loader: "html-loader" }] },
+      //leer css/acss
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(css|scss)$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
@@ -28,4 +30,11 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
   ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    compress: true,
+    port: 3000,
+  },
 };
