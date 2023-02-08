@@ -11,38 +11,23 @@ const MyAccount = () => {
             <label htmlFor="name" className="label">
               Name
             </label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Teff"
-              className="input input-name"
-            />
+            <p className="value">Camila Yokoo</p>
 
             <label htmlFor="email" className="label">
               Email
             </label>
-            <input
-              type="text"
-              id="email"
-              placeholder="platzi@example.com"
-              className="input input-email"
-            />
+            <p className="value">camilayokoo@gmail.com</p>
 
             <label htmlFor="password" className="label">
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              placeholder="*********"
-              className="input input-password"
-            />
+            <p className="value">*********</p>
           </div>
 
           <input
             type="submit"
-            value="Create"
-            className="primary-button login-button"
+            value="Edit"
+            className="secondary-button login-button"
           />
         </form>
       </div>
