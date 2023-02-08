@@ -5,6 +5,7 @@ import RecoveryPassword from "../pages/RecoreryPassword";
 import Login from "../pages/Login";
 import CreateMyAccount from "../pages/CreateMyAccount";
 import MyAccount from "../pages/MyAccount";
+import Orders from "../pages/Orders";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
@@ -25,6 +26,7 @@ const App = () => {
           <Route exact path="/Login" element={<Login />} />
           <Route exact path="/CreateMyAccount" element={<CreateMyAccount />} />
           <Route exact path="/MyAccount" element={<MyAccount />} />
+          <Route exact path="/Orders" element={<Orders />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
