@@ -1,6 +1,6 @@
 import React from "react";
-import "../style/NotFound.scss";
-const RecoveryPassword = () => {
+import "../style/Header.scss";
+const Header = () => {
   return (
     <nav>
       <img src="./icons/icon_menu.svg" alt="menu" className="menu" />
@@ -43,4 +43,4 @@ const RecoveryPassword = () => {
   );
 };
 
-export default RecoveryPassword;
+export default Header;

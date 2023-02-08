@@ -1,11 +1,7 @@
 import React from "react";
-
+import Header from "../components/Header";
 const RecoveryPassword = () => {
-  return (
-    <div>
-      <h1>React shop</h1>
-    </div>
-  );
+  return <Header />;
 };
 
 export default RecoveryPassword;
