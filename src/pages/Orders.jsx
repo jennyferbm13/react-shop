@@ -1,14 +1,13 @@
 import React from "react";
 import Order from "../components/Order";
-import OrderItem from "../components/OrderItem";
+import "../style/Order.scss";
 const Orders = () => {
   return (
     <div class="my-order">
       <div class="my-order-container">
-        <h1 class="title">My order</h1>
-
+        <h1 class="title">My orders</h1>
         <div class="my-order-content">
-          <OrderItem />
+          <Order />
         </div>
       </div>
     </div>
