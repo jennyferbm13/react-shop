@@ -1,6 +1,6 @@
 import React from "react";
-import "../style/OrderDetail.scss";
-const OrderItem = () => {
+import "../style/ShoppingItem.scss";
+const ShoppingItem = () => {
   return (
     <div className="shopping-cart">
       <figure>
@@ -11,9 +11,8 @@ const OrderItem = () => {
       </figure>
       <p>Bike</p>
       <p>$30,00</p>
-      <img src="./icons/icon_close.png" alt="close" />
     </div>
   );
 };
 
-export default OrderItem;
+export default ShoppingItem;
