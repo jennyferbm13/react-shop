@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "@style/ProductItem.scss";
-
-const API = "https://api.escuelajs.co/api/v1/products";
 
 import addCart from "@icons/bt_add_to_cart.svg";
 const ProductItem = () => {
-  const [cart, setCart] = useState([0]);
-  const handleCart = () => {
-    setCart([0]);
-  };
   return (
     <div className="product-card">
       <img
@@ -20,7 +14,7 @@ const ProductItem = () => {
           <p>$120,00</p>
           <p>Bike</p>
         </div>
-        <figure onClick={handleCart}>
+        <figure>
           <img src={addCart} alt="" />
         </figure>
       </div>
