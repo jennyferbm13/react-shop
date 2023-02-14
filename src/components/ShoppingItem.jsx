@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/ShoppingItem.scss";
+import "@style/ShoppingItem.scss";
 const ShoppingItem = () => {
   return (
     <div className="shopping-cart">

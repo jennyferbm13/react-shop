@@ -1,6 +1,6 @@
 import React from "react";
-import Order from "../components/Order";
-import "../style/Order.scss";
+import Order from "@components/Order";
+import "@style/Order.scss";
 const Orders = () => {
   return (
     <div class="my-order">

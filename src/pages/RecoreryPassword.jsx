@@ -1,10 +1,12 @@
 import React from "react";
-import "../style/RecoveryPassword.scss";
+import "@style//RecoveryPassword.scss";
+import logo from "@logos/logo_yard_sale.svg";
+import email from "@icons/email.svg";
 const RecoveryPassword = () => {
   return (
     <div className="login">
       <div className="form-container">
-        <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
 
         <h1 className="title">Email has been sent!</h1>
         <p className="subtitle">
@@ -12,7 +14,7 @@ const RecoveryPassword = () => {
         </p>
 
         <div className="email-image">
-          <img src="./icons/email.svg" alt="email" />
+          <img src={email} alt="email" />
         </div>
 
         <button className="primary-button login-button">Login</button>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/CreateMyAccount.scss";
+import "@style/CreateMyAccount.scss";
 const CreateMyAccount = () => {
   return (
     <div className="login">

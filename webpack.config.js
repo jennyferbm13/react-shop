@@ -10,7 +10,17 @@ module.exports = {
   },
 
   mode: "development",
-  resolve: { extensions: [".js", ".jsx"] },
+  resolve: {
+    extensions: [".js", ".jsx"],
+    alias: {
+      //buscar la ruta
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@containers": path.resolve(__dirname, "src/containers"),
+      "@style": path.resolve(__dirname, "src/style/"),
+      "@icons": path.resolve(__dirname, "src/assets/icons/"),
+      "@logos": path.resolve(__dirname, "src/assets/logos/"),
+    },
+  },
   module: {
     rules: [
       //leer html o jsx
@@ -23,8 +33,13 @@ module.exports = {
       { test: /\.html$/, use: [{ loader: "html-loader" }] },
       //leer css/acss
       {
-        test: /\.(css|scss)$/i,
+        test: /\.(css|scss)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      //leer img
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        type: "asset",
       },
     ],
   },
