@@ -10,27 +10,35 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import "../style/global.css";
-
+import AppContext from "../context/AppContext";
+import useInitialState from "../hooks/useInitialState";
 const App = () => {
+  const initialState = useInitialState();
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/NewPassword" element={<NewPassword />} />
-          <Route
-            exact
-            path="/RecoveryPassword"
-            element={<RecoveryPassword />}
-          />
-          <Route exact path="/Login" element={<Login />} />
-          <Route exact path="/CreateMyAccount" element={<CreateMyAccount />} />
-          <Route exact path="/MyAccount" element={<MyAccount />} />
-          <Route exact path="/Orders" element={<Orders />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/NewPassword" element={<NewPassword />} />
+            <Route
+              exact
+              path="/RecoveryPassword"
+              element={<RecoveryPassword />}
+            />
+            <Route exact path="/Login" element={<Login />} />
+            <Route
+              exact
+              path="/CreateMyAccount"
+              element={<CreateMyAccount />}
+            />
+            <Route exact path="/MyAccount" element={<MyAccount />} />
+            <Route exact path="/Orders" element={<Orders />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </AppContext.Provider>
   );
 };
 export default App;
