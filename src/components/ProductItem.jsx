@@ -5,9 +5,12 @@ import AppContext from "../context/AppContext";
 import addCart from "@icons/bt_add_to_cart.svg";
 const ProductItem = ({ product }) => {
   const { images, title, price } = product;
-  const { addToCart } = useContext(AppContext);
+  const { state, addToCart } = useContext(AppContext);
+
   const handleCart = (item) => {
     addToCart([item]);
+    console.log(typeof Object.keys(state.cart).length);
+    console.log(Object.keys(state.cart).length);
   };
   return (
     <div className="product-card">

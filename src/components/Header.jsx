@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "@style/Header.scss";
 import menuImg from "@icons/icon_menu.svg";
 import Menu from "@components/Menu";
 import logoImg from "@logos/logo_yard_sale.svg";
 import shoppingCard from "@icons/icon_shopping_cart.svg";
+import AppContext from "../context/AppContext";
 const Header = () => {
   const [menu, setMenu] = useState(false);
-
+  const { state } = useContext(AppContext);
   const handleMenu = () => {
     if (menu == false) {
       setMenu(true);
@@ -49,7 +50,7 @@ const Header = () => {
           </li>
           <li className="navbar-shopping-cart">
             <img src={shoppingCard} alt="shopping cart" />
-            <div>2</div>
+            {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
