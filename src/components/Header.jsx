@@ -5,8 +5,10 @@ import Menu from "@components/Menu";
 import logoImg from "@logos/logo_yard_sale.svg";
 import shoppingCard from "@icons/icon_shopping_cart.svg";
 import AppContext from "../context/AppContext";
+import MyOrder from "../containers/MyOrder";
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [shopCart, setShopCart] = useState(false);
   const { state } = useContext(AppContext);
   const handleMenu = () => {
     if (menu == false) {
@@ -14,8 +16,13 @@ const Header = () => {
     } else {
       setMenu(false);
     }
-    //or setToggle(!toggle)
+    //or setMenu(!menu)
   };
+
+  const handleShopCart = () => {
+    setShopCart(!shopCart);
+  };
+
   return (
     <nav>
       <img src={menuImg} alt="menu" className="menu" />
@@ -48,13 +55,15 @@ const Header = () => {
           <li className="navbar-email" onClick={handleMenu}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart">
+          <li className="navbar-shopping-cart" onClick={handleShopCart}>
+            {/*<li className="navbar-shopping-cart" onClick={() => setShopCart(!shopCart)}>*/}
             <img src={shoppingCard} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
       {menu && <Menu />}
+      {shopCart && <MyOrder />}
     </nav>
   );
 };
