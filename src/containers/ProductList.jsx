@@ -1,6 +1,6 @@
 import React from "react";
 import "@style/ProductItem.scss";
-import useGetProducts from "../hooks/useGetProducts";
+import useGetProducts from "@hooks/useGetProducts";
 
 const API = "https://api.escuelajs.co/api/v1/products";
 

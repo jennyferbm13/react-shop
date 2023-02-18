@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "@style/ProductInfo.scss";
 import OrderItem from "@components/OrderItem";
 import arrow from "@icons/flechita.svg";
-import AppContext from "../context/AppContext";
+import AppContext from "@context/AppContext";
 const MyOrder = () => {
   const { state } = useContext(AppContext);
   return (

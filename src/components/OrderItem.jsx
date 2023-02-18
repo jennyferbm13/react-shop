@@ -1,14 +1,15 @@
 import React from "react";
 import "@style/OrderDetail.scss";
 import close from "@icons/icon_close.png";
-const OrderItem = (product) => {
+const OrderItem = ({ product }) => {
+  console.log(product);
   return (
     <div className="shopping-cart">
       <figure>
-        <img src={product.images} alt={product.title} />
+        <img src={product[0].images} alt={product[0].title} />
       </figure>
-      <p>{product.title}</p>
-      <p>${product.price}</p>
+      <p>{product[0].title}</p>
+      <p>${product[0].price}</p>
       <img src={close} alt="close" />
     </div>
   );

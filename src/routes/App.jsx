@@ -1,17 +1,17 @@
 import React from "react";
-import Layout from "../containers/Layout";
-import NewPassword from "../pages/NewPassword";
-import RecoveryPassword from "../pages/RecoreryPassword";
-import Login from "../pages/Login";
-import CreateMyAccount from "../pages/CreateMyAccount";
-import MyAccount from "../pages/MyAccount";
-import Orders from "../pages/Orders";
+import Layout from "@containers/Layout";
+import NewPassword from "@pages/NewPassword";
+import RecoveryPassword from "@pages/RecoreryPassword";
+import Login from "@pages/Login";
+import CreateMyAccount from "@pages/CreateMyAccount";
+import MyAccount from "@pages/MyAccount";
+import Orders from "@pages/Orders";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
-import "../style/global.css";
-import AppContext from "../context/AppContext";
-import useInitialState from "../hooks/useInitialState";
+import Home from "@pages/Home";
+import NotFound from "@pages/NotFound";
+import "@style/global.css";
+import AppContext from "@context/AppContext";
+import useInitialState from "@hooks/useInitialState";
 const App = () => {
   const initialState = useInitialState();
   return (

@@ -4,8 +4,8 @@ import menuImg from "@icons/icon_menu.svg";
 import Menu from "@components/Menu";
 import logoImg from "@logos/logo_yard_sale.svg";
 import shoppingCard from "@icons/icon_shopping_cart.svg";
-import AppContext from "../context/AppContext";
-import MyOrder from "../containers/MyOrder";
+import AppContext from "@context/AppContext";
+import MyOrder from "@containers/MyOrder";
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [shopCart, setShopCart] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "@style/ProductItem.scss";
-import AppContext from "../context/AppContext";
+import AppContext from "@context/AppContext";
 
 import addCart from "@icons/bt_add_to_cart.svg";
 const ProductItem = ({ product }) => {
@@ -9,8 +9,6 @@ const ProductItem = ({ product }) => {
 
   const handleCart = (item) => {
     addToCart([item]);
-    console.log(typeof Object.keys(state.cart).length);
-    console.log(Object.keys(state.cart).length);
   };
   return (
     <div className="product-card">
