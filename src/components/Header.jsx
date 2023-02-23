@@ -6,26 +6,48 @@ import logoImg from "@logos/logo_yard_sale.svg";
 import shoppingCard from "@icons/icon_shopping_cart.svg";
 import AppContext from "@context/AppContext";
 import MyOrder from "@containers/MyOrder";
+import MenuMobile from "@components/MenuMobile";
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [shopCart, setShopCart] = useState(false);
+  const [menuMobile, setMenuMobile] = useState(false);
   const { state } = useContext(AppContext);
   const handleMenu = () => {
     if (menu == false) {
       setMenu(true);
+      setShopCart(false);
     } else {
       setMenu(false);
     }
     //or setMenu(!menu)
   };
 
+  const handleMenuMobile = () => {
+    if (menuMobile == false) {
+      setMenuMobile(true);
+      setShopCart(false);
+    } else {
+      setMenuMobile(true);
+    }
+  };
   const handleShopCart = () => {
-    setShopCart(!shopCart);
+    if (shopCart == false) {
+      setShopCart(true);
+      setMenu(false);
+      setMenuMobile(false);
+    } else {
+      setShopCart(false);
+    }
   };
 
   return (
-    <nav>
-      <img src={menuImg} alt="menu" className="menu" />
+    <nav className="plus">
+      <img
+        src={menuImg}
+        alt="menu"
+        className="menu"
+        onClick={handleMenuMobile}
+      />
       <div className="navbar-left">
         <img src={logoImg} alt="logo" className="logo" />
         <ul>
@@ -64,6 +86,7 @@ const Header = () => {
       </div>
       {menu && <Menu />}
       {shopCart && <MyOrder />}
+      {menuMobile && <MenuMobile />}
     </nav>
   );
 };

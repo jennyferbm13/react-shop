@@ -2,11 +2,21 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 24px;
+    //padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
-  }
+}
+
+.plus{
+  position: fixed;
+  background-color: var(--white);
+  width: 100%;
+
+}
   .menu {
     display: none;
+  }
+  .menu:hover {
+    cursor: pointer;
   }
   .logo {
     width: 100px;
@@ -34,6 +44,9 @@ nav {
     padding: 8px;
     border-radius: 8px;
   }
+  .navbar-right{
+    padding-right: 20px;
+  }
   .navbar-left ul li a:hover,
   .navbar-right ul li a:hover {
     border: 1px solid var(--hospital-green);
@@ -44,8 +57,15 @@ nav {
     font-size: var(--sm);
     margin-right: 12px;
   }
+  .navbar-email:hover {
+    cursor: pointer;
+  }
   .navbar-shopping-cart {
     position: relative;
+  }
+
+  .navbar-shopping-cart:hover {
+    cursor: pointer;
   }
   .navbar-shopping-cart div {
     width: 16px;
