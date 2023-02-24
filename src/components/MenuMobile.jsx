@@ -5,7 +5,7 @@ const MenuMobile = () => {
     <div className="mobile-menu">
       <ul>
         <li>
-          <a href="/">CATEGORIES</a>
+          <a>CATEGORIES</a>
         </li>
         <li>
           <a href="/">All</a>
@@ -29,10 +29,10 @@ const MenuMobile = () => {
 
       <ul>
         <li>
-          <a href="/">My orders</a>
+          <a href="/Orders">My orders</a>
         </li>
         <li>
-          <a href="/">My account</a>
+          <a href="/MyAccount">My account</a>
         </li>
       </ul>
 

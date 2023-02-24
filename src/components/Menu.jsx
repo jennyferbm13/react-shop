@@ -5,13 +5,13 @@ const Menu = () => {
     <div className="desktop-menu">
       <ul>
         <li>
-          <a href="/" className="title">
+          <a href="/Orders" className="title">
             My orders
           </a>
         </li>
 
         <li>
-          <a href="/">My account</a>
+          <a href="/MyAccount">My account</a>
         </li>
 
         <li>

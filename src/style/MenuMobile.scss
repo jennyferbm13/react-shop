@@ -1,6 +1,9 @@
 @import 'vars';
 .mobile-menu {
     padding: 24px;
+    position: inherit;
+    background-color: white;
+    top: 60px;
   }
   .mobile-menu a {
     text-decoration: none;
@@ -29,4 +32,10 @@
   }
   .sign-out:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-menu  {
+      display: none;
+    }
   }
