@@ -19,21 +19,21 @@ const App = () => {
       <HashRouter>
         <Layout>
           <Routes>
-            <Route exact path="#/" element={<Home />} />
-            <Route exact path="#/NewPassword" element={<NewPassword />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/NewPassword" element={<NewPassword />} />
             <Route
               exact
-              path="#/RecoveryPassword"
+              path="/RecoveryPassword"
               element={<RecoveryPassword />}
             />
-            <Route exact path="#/Login" element={<Login />} />
+            <Route exact path="/Login" element={<Login />} />
             <Route
               exact
-              path="#/CreateMyAccount"
+              path="/CreateMyAccount"
               element={<CreateMyAccount />}
             />
-            <Route exact path="#/MyAccount" element={<MyAccount />} />
-            <Route exact path="#/Orders" element={<Orders />} />
+            <Route exact path="/MyAccount" element={<MyAccount />} />
+            <Route exact path="/Orders" element={<Orders />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
